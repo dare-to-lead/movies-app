@@ -7,7 +7,103 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+}
+
+body { 
+  background-color: rgb(54, 24, 81);
+  color: white;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(69, 34, 105);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.search {
+  background-color: rgb(238, 235, 241);
+  border: 2px solid rgb(54, 24, 81);
+  border-radius: 30px;
+  color: rgb(54, 24, 81);
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.search:focus {
+  outline: 0;
+}
+.movie-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movies {
+  background-color: rgb(74, 38, 106);
+  border-radius: 3px;
+  box-shadow: 0 -3px 5px rgb(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 300px;
+}
+
+.movies img {
+  object-fit: cover;
+  height: 450px;
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-over {
+  background-color: white;
+ color: rgb(54, 24, 81);
+  position: absolute;
+  overflow: auto;
+  max-height: 100%;
+  padding: 1rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out
+}
+
+.movies:hover .movie-over {
+  transform: translateY(0%);
+}
+
+.tag {
+  background-color: rgb(54, 24, 81);
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tag.green {
+  color: rgb(8, 176, 8);
+}
+
+.tag.yellow {
+  color: yellow;
+}
+
+.tag.red {
+  color: red;
 }
